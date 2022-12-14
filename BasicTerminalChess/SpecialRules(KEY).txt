@@ -1,0 +1,19 @@
+/** Possible notations on the left, comments describing those notations on the right */
+
+0=|==> // Denotes the beginning of the description for a new piece
+King, Pawn... // Piece name
+--- // Denotes the start of a new special rule
+White King Side Castling // Sub-name for the rule (may refer to a specific variant or color)
+Castling // Overarching special rule
+[MOVE], [EXCO] // [MOVE] denotes that the special rule involves the movement of one or multiple pieces on the board in one turn (in a way that they naturally cannot) [EXCO] denotes that the special rule is more obscure and may cause pieces to disappear or be exchanged with other pieces. Stands for Exchange/Other.
+0-0, {NO}, {NOCAP} // Denotes how the move will be notated in the move sheet. No curly braces denotes a definite notation, for example, castling will always be notated 0-0 on the kingside. Curly braces denote that the move notation may change depending on the location the special move took place. {NO} denotes that the move will be notated as normal. {NOCAP} denotes that the move will be notated as normal AND be considered as a capture (stands for NOrmal CAPture)
+[TRIP], [EVER] // Denotes whether or not the special rule applies to EVERY turn. [EVER] denotes that the move DOES apply to every turn meaning that the gamestate must check whether it is possible to apply the special rule (promotion, where pawns reach the end of the board is one example). [TRIP] denotes that the move only occurs if the user prompts the move, and possibly validates some special conditions as well. Or in other words, the flow of the game is "tripped".
+=-= // Denotes the end of the constant statements
+
+/** The above notations will be constant for every special rule applied to the game. The below notations will be considered as statements, and may not show up across EVERY special rule */
+
+<CO> // Denotes that the special rule only applies to a certain player (white/black). <CO> BLACK denotes black and <CO> WHITE denotes white.
+<GS> // Denotes that a certain facet of the "GameState" (a grid including the locations of all pieces and empty squares) must be fulfilled, including the location of a piece or empty square relative to the current location of the piece performing a special rule.
+<AT> // Denotes that there must be either an attacked "A", or safe/unattacked "U" square in the vicinity, with coordinates relative to the current location of the piece performing a special rule.
+=+= // Denotes the end of the conditions required for the special rule to apply
+

@@ -1,0 +1,160 @@
+0=|==>
+King
+---
+White King-Side Castling
+Castling
+[MOVE]
+0-0
+[TRIP]
+=-=
+<CO> WHITE
+<GS> R@ 3+ 00, JustMoved[##]
+<GS> E@ 2+ 00
+<GS> E@ 1+ 00
+<AT> U@ 1+ 00
+=+=
+(OWN)
+2+ 00
+(OTH)
+3+ 00
+2- 00
+---
+White Queen-Side Castling
+Castling
+[MOVE]
+0-0-0
+[TRIP]
+=-=
+<CO> WHITE
+<GS> R@ 4- 00, JustMoved[##]
+<GS> E@ 2+ 00
+<GS> E@ 1+ 00
+<AT> U@ 1+ 00
+=+=
+(OWN)
+2- 00
+(OTH)
+4- 00
+3+ 00
+---
+Black Queen-Side Castling
+Castling
+[MOVE]
+0-0-0
+[TRIP]
+=-=
+<CO> BLACK
+<GS> R@ 4- 00, JustMoved[##]
+<GS> E@ 2+ 00
+<GS> E@ 1+ 00
+<AT> U@ 1+ 00
+=+=
+(OWN)
+2+ 00
+(OTH)
+4- 00
+3+ 00
+---
+Black King-Side Castling
+Castling
+[MOVE]
+0-0
+[TRIP]
+=-=
+<CO> BLACK
+<GS> R@ 3+ 00, JustMoved[##]
+<GS> E@ 2+ 00
+<GS> E@ 1+ 00
+<AT> U@ 1+ 00
+=+=
+(OWN)
+2- 00
+(OTH)
+3+ 00
+2- 00
+0=|==>
+Pawn
+---
+White Pawn Promotion
+Promotion
+[EXCO]
+{NOCAP}
+[EVER]
+=-=
+<CO> WHITE
+<GS> Self@ [1-8] [8]
+=+=
+(EXC)
+Self
+<|>
+[]
+---
+Black Pawn Promotion
+Promotion
+[EXCO]
+{NOCAP}
+[EVER]
+=-=
+<CO> BLACK
+<GS> Self@ [1-8] [1]
+=+=
+(EXC)
+Self
+<|>
+[]
+---
+Left En Passant
+En Passant
+[EXCO]
+{NOCAP}
+[TRIP]
+=-=
+<GS> P@ 1- 00, JustMoved[-1]
+<GS> E@ 1- 1+
+=+=
+(OWN)
+1- 1+
+(EXC)
+Pawn@ 1- 00
+<|>
+E
+---
+Right En Passant
+En Passant
+[EXCO]
+{NOCAP}
+[TRIP]
+=-=
+<GS> P@ 1+ 00, JustMoved[-1]
+<GS> E@ 1+ 1+
+=+=
+(OWN)
+1+ 1+
+(EXC)
+Pawn@ 1+ 00
+<|>
+E
+---
+White Pawn Double Move
+Starting Double Move
+[MOVE]
+{NO}
+[TRIP]
+=-=
+<GS> S@ [1-8] [2]
+<GS> E@ 00 2+
+=+=
+(OWN)
+00 2+
+---
+Black Pawn Double Move
+Starting Double Move
+[MOVE]
+{NO}
+[TRIP]
+=-=
+<GS> S@ [1-8] [7]
+<GS> E@ 00 2+
+=+=
+(OWN)
+00 2-
